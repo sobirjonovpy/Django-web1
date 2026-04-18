@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <title> Bosh sahifa </title>
+</head>
+<body>
+  <div class="button-cont">
+    <button class="button">
+      <a href="{% url 'create' %}" style="text-decoration: none; color: aliceblue;">+add post</a>
+    </button>
+  </div>
+
+  <div class="posts">
+    {% for post in posts %}
+    <div class="card">
+      {% if post.img %}
+        <div class="card-img"><img src="{{ post.img.url }}" alt="rasm" class="img"></div>
+      {% endif %}
+      <div class="card-title">
+        <h3>{{ post.title }}</h3>
+      </div>
+      <hr class="card-divider">
+      <div class="card-footer">
+        <div class="card-price"><a href="{{ post.url }}" class="link">link</a></div>
+        <button class="card-btn">
+          <a href="{% url 'more' post.id %}" class="more">more</a>
+        </button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</body>
+</html>
