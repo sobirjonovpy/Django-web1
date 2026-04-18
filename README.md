@@ -1,1 +1,1 @@
-#1. Clone repository
+# 1. Clone repository
