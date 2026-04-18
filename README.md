@@ -1,3 +1,1 @@
-# code run 
-make
-
+1. Clone repository
