@@ -1,22 +1,27 @@
 # 1. Clone repository
 git clone https://github.com/sobirjonovpy/Django-web1
 
+# 2. cd django-web1
 
-# 2. Create environment
+# 3. Create environment
 python -m venv env
-source env/bin/activate # Linux/Mac
+
+# Linux/Mac   env activate
+source env/bin/activate
+
+# Windows    env activate
 env\Scripts\activate    # Windows
 
 
-# 3. Install libraries
+# 4. Install libraries
 pip install -r requirements.txt
 
 
-# 4. Apply migrations
+# 5. Apply migrations
 python manage.py migrate
 
 
-# 5. Run server
+# 6. Run server
 python manage.py runserver
 
 
